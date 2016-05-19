@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+        default-lazy-init="true" default-autowire="byName">
+    <context:component-scan base-package="com.womai.mobile.api"/>
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+    <import resource="classpath*:spring/applicationContext-redis-shard.xml"/>
+
+    <bean id="multiThreadHttpClient4Manager" class="com.womai.common.utils.MultiThreadHttpClient4Manager">
+        <!-- 设置连接超时时间 -->
+        <property name="timeout" value="50000"></property>
+        <!-- 设置读超时时间 -->
+        <property name="readTimeout" value="50000"></property>
+        <!-- 设置每个主机的连接数 -->
+        <property name="perhostMaxConnection" value="200"></property>
+        <!-- 设置总的连接数 -->
+        <property name="totalMaxConnection" value="500"></property>
+        <!-- 设置http池超时时间 -->
+        <property name="waitTimeout" value="100"></property>
+        <!-- 设置是否重定向 -->
+        <property name="redirect" value="true"></property>
+    </bean>
+</beans>

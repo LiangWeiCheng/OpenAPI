@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profilesXml xmlns="http://maven.apache.org/PROFILES/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://maven.apache.org/PROFILES/1.0.0 http://maven.apache.org/xsd/profiles-1.0.0.xsd">
+
+    <profiles>
+        <profile>
+            <activation>
+                <os>
+                    <family>Windows</family>
+                </os>
+            </activation>
+
+            <id>local</id>
+            <properties>
+                <cms.url>http://capi.m.womai.test/</cms.url>
+                <mobile.app.url>http://10.6.24.235:8080/wmapi/</mobile.app.url>
+                <home.url>http://mobile-api.womai.local/</home.url>
+                <wx.url>http://paytest1.womaiapp.com/</wx.url>
+                <mobile.cache.url>http://ctapi.m.womai.test/</mobile.cache.url>
+                <log.ip>10.6.14.223</log.ip>
+                <infolog>INFO</infolog>
+                <home.product>0</home.product>
+
+                <logFlag>true</logFlag>
+                <loginfo>INFO</loginfo>
+                <!--redis 服务器配置-->
+                <redis.ip>10.0.27.104</redis.ip>
+                <redis.ip1>10.0.27.104</redis.ip1>
+                <redis.port>6382</redis.port>
+                <rabbit.host>10.6.27.218</rabbit.host>
+                <rabbit.username>admin</rabbit.username>
+                <rabbit.pwd>123456</rabbit.pwd>
+                <rabbit.port>5672</rabbit.port>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+
+                <cms.url>http://capi.m.womai.test/</cms.url>
+                <mobile.app.url>http://10.6.24.235:8080/wmapi/</mobile.app.url>
+                <home.url>http://mobile-api.womai.local/</home.url>
+                <wx.url>http://paytest1.womaiapp.com/</wx.url>
+                <mobile.cache.url>http://ctapi.m.womai.test/</mobile.cache.url>
+                <home.product>1</home.product>
+                <logFlag>true</logFlag>
+                <loginfo>INFO</loginfo>
+                <!--redis 服务器配置-->
+                <redis.ip>10.0.27.104</redis.ip>
+                <redis.ip1>10.0.27.104</redis.ip1>
+                <redis.port>6382</redis.port>
+                <rabbit.host>10.6.27.218</rabbit.host>
+                <rabbit.username>admin</rabbit.username>
+                <rabbit.pwd>123456</rabbit.pwd>
+                <rabbit.port>5672</rabbit.port>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <cms.url>http://capi.m.womai.test/</cms.url>
+                <mobile.app.url>http://10.6.24.235:8080/wmapi/</mobile.app.url>
+                <home.url>http://mobile-api.womai.local/</home.url>
+                <wx.url>http://paytest1.womaiapp.com/</wx.url>
+                <mobile.cache.url>http://ctapi.m.womai.test/</mobile.cache.url>
+                <home.product>1</home.product>
+                <logFlag>false</logFlag>
+                <loginfo>INFO</loginfo>
+                <log.ip>10.0.27.104</log.ip>
+                <!--redis 服务器配置-->
+                <redis.ip>10.0.27.104</redis.ip>
+                <redis.ip1>10.0.27.104</redis.ip1>
+
+                <redis.port>6382</redis.port>
+                <rabbit.host>10.6.27.218</rabbit.host>
+                <rabbit.username>admin</rabbit.username>
+                <rabbit.pwd>123456</rabbit.pwd>
+                <rabbit.port>5672</rabbit.port>
+            </properties>
+        </profile>
+        <profile>
+            <id>pro</id>
+            <properties>
+                <cms.url>http://capi.m.womai.com/</cms.url>
+                <mobile.app.url>http://10.6.6.162/wmapi/</mobile.app.url>
+                <mobile.cache.url>http://ctapi.m.womai.com/</mobile.cache.url>
+                <wx.url>http://payv2.womaiapp.com/</wx.url>
+                <home.url>http://wapi.m.womai.com/</home.url>
+                <logFlag>false</logFlag>
+                <loginfo>WARN</loginfo>
+                <log.ip>127.0.0.1</log.ip>
+                <infolog>WARN</infolog>
+                <home.product>1</home.product>
+                <!--redis 服务器配置-->
+                <redis.ip>10.6.14.223</redis.ip>
+                <redis.ip1>10.6.24.100</redis.ip1>
+                <redis.port>6390</redis.port>
+                <rabbit.host>10.6.25.46</rabbit.host>
+                <rabbit.username>admin</rabbit.username>
+                <rabbit.pwd>1q2w3ezxc</rabbit.pwd>
+                <rabbit.port>5672</rabbit.port>
+            </properties>
+        </profile>
+
+    </profiles>
+
+
+</profilesXml>

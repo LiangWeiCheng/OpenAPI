@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.womai.mobile</groupId>
+        <artifactId>womai-mobile-api</artifactId>
+        <version>${mobile.api.version}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.womai.mobile</groupId>
+    <artifactId>mobile-api-common</artifactId>
+    <name>MOBILE-API-COMMON Modular</name>
+    <version>${mobile.api.common.version}</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.womai.mobile</groupId>
+            <artifactId>mobile-api-domain</artifactId>
+            <version>${mobile.api.domain.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.womai.common.tool</groupId>
+            <artifactId>common-utils</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
